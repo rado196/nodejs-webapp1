@@ -1,0 +1,38 @@
+{
+  "name": "nodejs-webapp1",
+  "description": "NodeJS webapp",
+  "version": "1.0.0",
+  "author": "Rado Blrtsyan",
+  "license": "ISC",
+  "scripts": {
+    "start": "nodemon ./src/index.js",
+    "test-balance": "node ./test-balance.js",
+    "lint:prod": "eslint --ext js --config .eslintrc.prod --fix src",
+    "lint": "eslint --ext js --config .eslintrc --fix src",
+    "format": "prettier --config .prettierrc --log-level error --write 'src/**/*.(js|json)'"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "dotenv-expand": "^10.0.0",
+    "express": "^4.18.2",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.35.2",
+    "umzug": "^3.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.6",
+    "@babel/eslint-parser": "^7.23.3",
+    "axios": "^1.6.2",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-prettier": "^5.1.1",
+    "eslint-plugin-unicorn": "^50.0.1",
+    "express-list-routes": "^1.1.9",
+    "husky": "^8.0.3",
+    "nodemon": "^3.0.2",
+    "prettier": "^3.1.1"
+  }
+}

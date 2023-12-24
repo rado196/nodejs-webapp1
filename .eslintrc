@@ -1,0 +1,124 @@
+{
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "requireConfigFile": false,
+    "ecmaVersion": 2015
+  },
+  "root": true,
+  "env": {
+    "node": true,
+    "es6": true,
+    "browser": false
+  },
+  "extends": [
+    "eslint:recommended",
+    "prettier",
+    "plugin:prettier/recommended",
+    "plugin:import/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "plugins": ["prettier", "unicorn"],
+  "rules": {
+    // unicorn
+    "unicorn/numeric-separators-style": [
+      "warn",
+      {
+        "onlyIfContainsSeparator": true
+      }
+    ],
+    "unicorn/no-useless-undefined": "error",
+    "unicorn/explicit-length-check": "error",
+    "unicorn/prefer-array-some": "error",
+    "unicorn/no-new-array": "error",
+    "unicorn/filename-case": "off",
+
+    // import
+    "import/no-unresolved": "off",
+    "import/no-anonymous-default-export": "error",
+    "import/namespace": "off",
+    "import/newline-after-import": "error",
+    "import/no-named-as-default-member": "off",
+
+    // prettier
+    "prettier/prettier": "warn",
+
+    // common
+    "eol-last": ["error", "always"],
+    "linebreak-style": ["error", "unix"],
+    "max-len": [
+      "error",
+      {
+        "ignoreComments": true,
+        "ignoreTrailingComments": true,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreRegExpLiterals": true,
+        "tabWidth": 2,
+        "code": 90
+      }
+    ],
+    "yoda": "warn",
+    "default-case": "off",
+    "no-loop-func": "warn",
+    "no-extra-boolean-cast": "warn",
+    "no-console": "warn",
+    "no-useless-escape": "warn",
+    "eqeqeq": "warn",
+    "no-fallthrough": "warn",
+    "semi": "warn",
+    "curly": "warn",
+    "no-shadow": "error",
+    "radix": "off",
+    "camelcase": [
+      "error",
+      {
+        "ignoreImports": true,
+        "ignoreDestructuring": true,
+        "properties": "never"
+      }
+    ],
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "prev": "var",
+        "next": "return"
+      }
+    ],
+    "no-multiple-empty-lines": "warn",
+    "no-eval": "off",
+    "no-self-assign": "error",
+    "no-self-compare": "error",
+    "no-debugger": "warn",
+    "no-prototype-builtins": "off",
+    "no-constant-condition": "warn",
+    "no-empty-pattern": "off",
+    "no-duplicate-imports": "error",
+    "no-unsafe-member-access": "off",
+    "no-empty-interface": "off",
+    "no-unsafe-call": "off",
+    "no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^(_.*|req|res|next|options|sequelize|Sequelize|queryInterface)$",
+        "varsIgnorePattern": "^(_.*|req|res|next|options|sequelize|Sequelize|queryInterface)$"
+      }
+    ],
+    "no-unsafe-assignment": "off",
+    "no-floating-promises": "off",
+    "no-unsafe-return": "off",
+    "no-inferrable-types": "off",
+    "no-misused-promises": "off",
+    "no-empty-function": "off",
+    "no-async-promise-executor": "off",
+    "no-case-declarations": "off",
+    "require-await": "off",
+    "restrict-plus-operands": "off",
+    "restrict-template-expressions": "off",
+    "unbound-method": "off",
+    "global-require": "error",
+    "explicit-module-boundary-types": "off"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "extends": ["./.eslintrc"],
+  "rules": {
+    // prettier
+    "prettier/prettier": "error",
+
+    // common
+    "semi": "error",
+    "curly": "error",
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^(_.*|req|res|next|options|sequelize|Sequelize|queryInterface)$",
+        "varsIgnorePattern": "^(_.*|req|res|next|options|sequelize|Sequelize|queryInterface)$"
+      }
+    ],
+    "no-multiple-empty-lines": "error",
+    "no-console": "error",
+    "no-debugger": "error",
+    "no-constant-condition": "error"
+  }
+}
